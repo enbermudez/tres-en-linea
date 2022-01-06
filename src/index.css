@@ -111,6 +111,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-weight: bolder;
+  margin-bottom: 25px;
 }
 
 .current > span {
