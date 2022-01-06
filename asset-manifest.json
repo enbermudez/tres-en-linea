@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tres-en-linea/static/css/main.79cb595c.css",
-    "main.js": "/tres-en-linea/static/js/main.3546aa43.js",
+    "main.css": "/tres-en-linea/static/css/main.f61ba492.css",
+    "main.js": "/tres-en-linea/static/js/main.b044d9b1.js",
     "index.html": "/tres-en-linea/index.html",
-    "main.79cb595c.css.map": "/tres-en-linea/static/css/main.79cb595c.css.map",
-    "main.3546aa43.js.map": "/tres-en-linea/static/js/main.3546aa43.js.map"
+    "main.f61ba492.css.map": "/tres-en-linea/static/css/main.f61ba492.css.map",
+    "main.b044d9b1.js.map": "/tres-en-linea/static/js/main.b044d9b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.79cb595c.css",
-    "static/js/main.3546aa43.js"
+    "static/css/main.f61ba492.css",
+    "static/js/main.b044d9b1.js"
   ]
 }
