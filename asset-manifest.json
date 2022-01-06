@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tres-en-linea/static/css/main.79cb595c.css",
+    "main.js": "/tres-en-linea/static/js/main.3546aa43.js",
+    "index.html": "/tres-en-linea/index.html",
+    "main.79cb595c.css.map": "/tres-en-linea/static/css/main.79cb595c.css.map",
+    "main.3546aa43.js.map": "/tres-en-linea/static/js/main.3546aa43.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79cb595c.css",
+    "static/js/main.3546aa43.js"
+  ]
+}
