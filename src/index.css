@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameboard {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  outline: 1px solid #000;
+}
+
+.gameboard.disabled {
+  pointer-events: none;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition-duration: .25s;
+}
+
+.cell:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.cell.disabled {
+  cursor: default;
+}
+
+.cell.disabled:hover {
+  background: transparent;
+}
+
+.scores {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.score {
+  font-family: calibri;
+  font-size: 2rem;
+  position: relative;
+}
+
+.score::after {
+  content: '¡Has ganado!';
+  display: block;
+  position: absolute;
+  font-size: 1rem;
+  top: -1rem;
+  color: #ff8080;
+  transition-duration: .25s;
+  opacity: 0;
+  visibility: hidden;
+  font-weight: bold;
+}
+
+.score:nth-of-type(2)::after {
+  right: 0;
+}
+
+.score.winner::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.restart {
+  border: none;
+  background: #55b3fa;
+  color: #000;
+  font-family: calibri;
+  font-size: 1.5rem;
+  padding: 10px;
+  transition-duration: .25s;
+  border-radius: 5px;
+  margin: 25px auto 0;
+  display: block;
+}
+
+.restart.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.restart:hover {
+  background: #80c8ff;
+}
+
+@media (max-width: 400px) {
+  .gameboard {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cell {
+    font-size: 2rem;
+  }
+
+  .scores {
+    width: 300px;
+  }
+
+  .score {
+    font-size: 1.25rem;
+  }
+
+  .score::after {
+    font-size: 0.8rem;
+    top: -0.8rem;
+  }
 }
