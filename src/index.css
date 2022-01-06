@@ -105,6 +105,18 @@ body {
   background: #80c8ff;
 }
 
+.current {
+  font-family: calibri;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.current > span {
+  font-weight: 400;
+}
+
 @media (max-width: 400px) {
   .gameboard {
     width: 300px;

@@ -45,8 +45,9 @@ const App = () => {
 
   const restartGame = () => {
     setBoardCells(['', '', '', '', '', '', '', '', '']);
-    setCurrentTurn(!currentTurn);
+    setCurrentTurn(0);
     setGameOver(false);
+    initialSetup();
   };
 
   useEffect(() => {
@@ -64,14 +65,20 @@ const App = () => {
     }
   }, [boardCells]);
 
-  useEffect(() => {
+  const initialSetup = () => {
     const [firstEmoji, secondEmoji] = EMOJIS.sort(() => 0.5 - Math.random()).slice(0, 2);
     setFirstPlayer({ ...firstPlayer, emoji: firstEmoji });
     setSecondPlayer({ ...secondPlayer, emoji: secondEmoji });
+  }
+
+  useEffect(() => {
+    initialSetup();
   }, []);
 
   return (
     <>
+      <div className="current">Turno actual: <span>{!currentTurn ? firstPlayer.emoji : secondPlayer.emoji}</span></div>
+
       <div className="scores">
         <div className={classnames('score', { winner: currentTurn && gameOver && !tie })}>Jugador {firstPlayer.emoji} [{firstPlayer.score}]</div>
         <div className={classnames('score', { winner: !currentTurn && gameOver && !tie })}>[{secondPlayer.score}] Jugador {secondPlayer.emoji}</div>
